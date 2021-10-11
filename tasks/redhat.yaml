@@ -34,6 +34,7 @@
     - "scl-utils"
     - "libffi-devel"
     - "createrepo"
+    - "python2-psycopg2"
   become: True
 
 
