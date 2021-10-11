@@ -38,7 +38,7 @@
 
 - name: " build_virtual_environments | Build a virtual environment for ({{ project }} - {{ version }})"
   pip:
-    requirements: '/tmp/builder/checkout/{{ project }}/{{ version }}/requirements.txt'
+    requirements: '/tmp/builder/checkout/{{ project }}/{{ version }}/requirements/requirements.txt'
     virtualenv: '/var/lib/openstack/venv/{{ project }}/{{ version }}/venv'
   become: True
 
