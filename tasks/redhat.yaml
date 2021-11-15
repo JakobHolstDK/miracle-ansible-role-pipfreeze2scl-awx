@@ -68,3 +68,27 @@
     group: root
     mode: '0600'
   become: True
+
+- name: create dir
+  ansible.builtin.file:
+    path: /root/rpmbuild
+    owner: root
+    group: root
+    state: directory
+    mode: '0700'
+
+- name: create dir
+  ansible.builtin.file:
+    path: /root/rpmbuild/SOURCES
+    owner: root
+    group: root
+    state: directory
+    mode: '0700'
+
+- name: create dir
+  ansible.builtin.file:
+    path: /root/rpmbuild/RPMS
+    owner: root
+    group: root
+    state: directory
+    mode: '0700'
