@@ -48,27 +48,6 @@
     mode: '0700'
   become: True
 
-- name: Copy key file to root
-  shell: cp /home/vagrant/scldistro /root/.ssh/id_rsa
-  become: True
-
-- name: Set permissions
-  ansible.builtin.file:
-    path: /root/.ssh/id_rsa
-    owner: root
-    group: root
-    mode: '0600'
-  become: True
-
-- name: Copy file config to root ssh
-  ansible.builtin.copy:
-    src: config
-    dest: /root/.ssh/config
-    owner: root
-    group: root
-    mode: '0600'
-  become: True
-
 - name: create dir
   ansible.builtin.file:
     path: /root/rpmbuild
